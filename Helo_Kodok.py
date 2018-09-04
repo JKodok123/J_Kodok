@@ -1002,12 +1002,12 @@ def clientBot(op):
                             elif cmd == 'mention':
                                 group = client.getGroup(msg.to)
                                 nama = [contact.mid for contact in group.members]
-                                k = len(nama)//50
+                                k = len(nama)//20
                                 for a in range(k+1):
                                     txt = u''
                                     s=0
                                     b=[]
-                                    for i in group.members[a*50 : (a+1)*50]:
+                                    for i in group.members[a*20 : (a+1)*20]:
                                         b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                                         s += 7
                                         txt += u'@Zero \n'
